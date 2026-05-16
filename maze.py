@@ -20,9 +20,9 @@ class Maze:
 
     def import_from(self) -> list[str]:
         self.maze: list[str] = []
-        with open(self.filename, 'r') as f:
+        with open(self.filename, 'r', newline='') as f:
             for row in f:
-                self.maze.append(row.strip())
+                self.maze.append(row.strip('\n').strip('\r'))
         
         self.ysize = len(self.maze)
         self.xsize = len(self.maze[0])
