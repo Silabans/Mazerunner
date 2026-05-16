@@ -23,6 +23,7 @@ class Maze:
         with open(self.filename, 'r', newline='') as f:
             for row in f:
                 self.maze.append(row.strip('\n').strip('\r'))
+        print(repr(self.maze[0]))
         
         self.ysize = len(self.maze)
         self.xsize = len(self.maze[0])
@@ -65,5 +66,4 @@ class Maze:
                     print(SYMBOLS["space"], end='')
                 else:
                     print(SYMBOLS["wall"], end='')
-                print()
-        print()
+            print()

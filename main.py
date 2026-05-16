@@ -10,7 +10,7 @@ from maze import Maze
 maze = Maze('maze.txt')
 maze.import_from()
 here = maze.start_coor
-options = Stack()
+options = Queue()
 
 # visited coordinates
 visited = set()
@@ -32,13 +32,12 @@ while here != maze.end_coor:
 
     for coor in around:
         if coor not in visited:
-            options.push(coor)
+            options.enqueue(coor)
 
     try:
-        here = options.pop()
+        here = options.dequeue()
         step += 1
     except IsEmptyError:
         raise IsEmptyError('No solution; no more paths to choose from')
     
-
     sleep(0.5)
