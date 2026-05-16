@@ -90,7 +90,7 @@ class Queue(LinkedList):
 
     def pop(self):
         """ Ensures a unified interface between Queue and Stack for ease in the maze loop."""
-        self.dequeue()
+        return self.dequeue()
 
     def dequeue(self) -> tuple[int, int]:
         """Dequeues item from the front of the queue, and returns it.
@@ -104,7 +104,7 @@ class Queue(LinkedList):
         Raises
             Empty - if queue is already empty
         """
-        if self.length == 0:
+        if self.length() == 0:
             raise IsEmptyError('queue is empty')
 
         value = self.get(0)
