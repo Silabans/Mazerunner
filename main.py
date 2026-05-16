@@ -32,10 +32,10 @@ while here != maze.end_coor:
 
     for coor in around:
         if coor not in visited:
-            options.enqueue(coor)
+            options.push(coor)
 
     try:
-        here = options.dequeue()
+        here = options.pop()
         step += 1
     except IsEmptyError:
         raise IsEmptyError('No solution; no more paths to choose from')

@@ -41,6 +41,10 @@ class CircularQueue:
         else:
             self.tail = next_tail
 
+    def push(self, item):
+        """ Ensures a unified interface between Queue and Stack for ease in the maze loop. """
+        self.enqueue(item)
+
 
     def dequeue(self) -> tuple[int, int]:
         """Return the item at the head of the queue.
@@ -69,6 +73,10 @@ class CircularQueue:
             self.head = next_head
 
         return value
+    
+    def pop(self):
+        """ Ensures a unified interface between Queue and Stack for ease in the maze loop """
+        self.dequeue()
     
     def contains(self, item: tuple[int, int]):
         for i in range(self.size):

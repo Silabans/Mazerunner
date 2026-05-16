@@ -84,6 +84,14 @@ class Queue(LinkedList):
         """
         self.append(item)
 
+    def push(self, item):
+        """ Ensures a unified interface between Queue and Stack for ease in the maze loop."""
+        self.enqueue(item)
+
+    def pop(self):
+        """ Ensures a unified interface between Queue and Stack for ease in the maze loop."""
+        self.dequeue()
+
     def dequeue(self) -> tuple[int, int]:
         """Dequeues item from the front of the queue, and returns it.
 
