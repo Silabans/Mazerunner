@@ -1,4 +1,4 @@
-from LinkedList import LinkedList, Node
+from linkedlist import LinkedList, Node
 
 
 class IsEmptyError(Exception):
