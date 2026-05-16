@@ -60,10 +60,10 @@ while current != maze.start_coor:
 path.append(maze.start_coor)
 path.reverse()
 
-print(f"PATH: {path}")
-print(f'path length: {len(path)}')
-print(f'number of visited: {len(visited)}')
-print(f'length of seen: {len(seen)}')
+# print(f"PATH: {path}")
+# print(f'path length: {len(path)}')
+# print(f'number of visited: {len(visited)}')
+# print(f'length of seen: {len(seen)}')
 
 
 reconstructed = Queue()
